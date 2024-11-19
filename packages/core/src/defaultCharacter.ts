@@ -1,12 +1,15 @@
-import { Character, ModelProviderName } from "./types.ts";
+import { Character, Clients, ModelProviderName } from "./types.ts";
 
 export const defaultCharacter: Character = {
     name: "Eliza",
     plugins: [],
-    clients: [],
-    modelProvider: ModelProviderName.OPENAI,
+    clients: [Clients.DISCORD],
+    modelProvider: ModelProviderName.GROQ,
     settings: {
-        secrets: {},
+        secrets: {
+            DISCORD_APPLICATION_ID: process.env.DISCORD_APPLICATION_ID,
+            DISCORD_API_TOKEN: process.env.DISCORD_API_TOKEN,
+        },
         voice: {
             model: "en_US-hfc_female-medium",
         },

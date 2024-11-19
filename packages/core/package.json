@@ -17,6 +17,7 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
+        "@ai16z/client-twitter": "workspace:*",
         "@eslint/js": "^9.13.0",
         "@rollup/plugin-commonjs": "25.0.8",
         "@rollup/plugin-json": "6.1.0",
